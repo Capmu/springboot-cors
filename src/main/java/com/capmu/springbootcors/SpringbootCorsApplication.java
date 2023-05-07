@@ -27,6 +27,7 @@ public class SpringbootCorsApplication {
 	@Bean
 	public SecurityFilterChain chain(HttpSecurity http) throws Exception {
 		http.cors();
+		http.csrf().disable();
 		return http.build();
 	}
 
